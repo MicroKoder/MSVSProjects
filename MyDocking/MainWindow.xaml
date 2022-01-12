@@ -1,0 +1,27 @@
+﻿<Window x:Class="MyDocking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyDocking"
+        xmlns:custom="clr-namespace:MyDocking.NDock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <custom:MyDockPanel x:Name="myDock">
+            <custom:MyDockPanel.TabElements>
+                <custom:Document Header="Tab1" Dock="Right">
+                    <custom:Document.Content>
+                        <Ellipse Fill="#FF4ACD00" Width="50" Height="50"/>
+                    </custom:Document.Content>
+                </custom:Document>
+                <custom:Document Header="Tab2">
+                    <custom:Document.Content>
+                        <Rectangle Fill="#FF5A5AFB" />
+                    </custom:Document.Content>
+
+                </custom:Document>
+            </custom:MyDockPanel.TabElements>
+        </custom:MyDockPanel>
+    </Grid>
+</Window>
